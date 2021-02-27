@@ -20,8 +20,3 @@ while True:
             print(number_1, '/', number_2, '=', number_1 / number_2)
     else:
         print('not valid operator')
-
-
-
-
-
