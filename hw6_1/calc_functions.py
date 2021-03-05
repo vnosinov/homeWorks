@@ -28,6 +28,7 @@ def c_mult(a, b):
     """
     return a * b
 
+
 def c_div(a, b):
     """
     division of two numbers
@@ -35,4 +36,6 @@ def c_div(a, b):
     :param b: number 2
     :return: division
     """
+    if b == 0:
+        return print('division by nul')
     return a / b

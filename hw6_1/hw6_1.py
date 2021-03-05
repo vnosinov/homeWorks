@@ -1,6 +1,12 @@
 import calc_functions as cf
 
-const_opr = ('+', '-', '/', '*')
+OPERATORS = {
+    '+': cf.c_sum,
+    '-': cf.c_diff,
+    '*': cf.c_mult,
+    '/': cf.c_div,
+}
+
 while True:
 
     try:
@@ -9,8 +15,8 @@ while True:
         print('Please< enter only numbers!')
         continue
 
-    operand = input('Input operation:  ')
-    if operand not in const_opr:
+    operator = input('Input operation:  ')
+    if operator not in OPERATORS:
         print('not valid operator')
         continue
 
@@ -20,21 +26,5 @@ while True:
         print('Please< enter only numbers!')
         continue
 
-    if operand == '+':
-        print(cf.c_sum(number_1, number_2))
-    elif operand == '-':
-        print(cf.c_diff(number_1, number_2))
-    elif operand == '*':
-        print(cf.c_mult(number_1, number_2))
-    elif operand == '/' and number_2 == 0:
-        print('division by zero is prohibited')
-    else:
-        print(cf.c_div(number_1, number_2))
-
-
-
-
-
-
-
-
+    if operator in OPERATORS:
+        print('result: ', OPERATORS[operator](number_1, number_2))
