@@ -22,9 +22,3 @@ while True:
         print('this is a noy leap year', '2')
     else:
         print('this is leap year', '3')
-
-
-
-
-
-

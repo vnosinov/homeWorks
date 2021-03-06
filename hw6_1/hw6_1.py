@@ -26,5 +26,4 @@ while True:
         print('Please< enter only numbers!')
         continue
 
-    if operator in OPERATORS:
-        print('result: ', OPERATORS[operator](number_1, number_2))
+    print('result: ', OPERATORS[operator](number_1, number_2))
